@@ -13,7 +13,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'my-store-app',
+    title: 'Knife shop',
     htmlAttrs: {
       lang: 'en'
     },
