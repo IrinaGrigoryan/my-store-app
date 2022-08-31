@@ -1,8 +1,8 @@
 import { Apisful } from './index'
 
 export default {
-  async list() {
-    const response = await Apisful.get('products/');
+  async list(filter) {
+    const response = await Apisful.get('products/', { params: { filter: JSON.stringify(filter) } });
     return response.data.results;
   },
   async get (productId) {

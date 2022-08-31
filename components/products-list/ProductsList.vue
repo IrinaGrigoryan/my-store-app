@@ -33,6 +33,7 @@ export default {
   margin: 0 -15px;
 
   &__item {
+    margin-bottom: 30px;
     padding: 0 15px;
     width: 25%;
   }

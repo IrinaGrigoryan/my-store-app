@@ -1,5 +1,9 @@
 import Vue from 'vue'
 
 Vue.filter('formatPrice', (value) => {
-    return `${value.toFixed(2)} UAH`
+  if (!value) {
+    return value
+  }
+
+  return `${value.toFixed(2)} UAH`
 })
