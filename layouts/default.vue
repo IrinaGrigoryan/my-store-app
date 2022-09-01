@@ -1,14 +1,13 @@
 <template>
-  <div class="site-container">
-    <NavbarMain />
-    <Nuxt />
+  <div class="site-wrapper">
+    <div class="site-wrapper__navbar">
+      <NavbarMain />
+    </div>
+    <div class="site-wrapper__main">
+      <Nuxt />
+    </div>
+    <div class="site-wrapper__footer">
+      <FooterMain />
+    </div>
   </div>
 </template>
-
-<style lang="scss">
-.site-container {
-  margin: 0 auto;
-  max-width: 1320px;
-  padding: 0 20px;
-}
-</style>

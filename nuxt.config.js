@@ -13,9 +13,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Knife shop',
+    title: 'Pawn shop',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'uk'
     },
     meta: [
       { charset: 'utf-8' },
@@ -30,7 +30,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/scss/base.scss'
+    '@/assets/scss/base.scss',
+    'node_modules/@fortawesome/fontawesome-free/scss/brands',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -43,7 +44,15 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: [
+      './assets/scss/_mixins.scss',
+      './assets/scss/_variables.scss',
+    ]
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

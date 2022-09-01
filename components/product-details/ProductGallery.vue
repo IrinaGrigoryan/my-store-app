@@ -56,27 +56,48 @@ export default {
 .product-gallery {
   &__preview {
     align-items: center;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px 1px rgba($color-black, 0.3);
     display: flex;
     justify-content: center;
     min-height: 634px;
     padding: 50px;
+
+    @include media-max(767) {
+      min-height: 350px;
+      padding: 15px;
+    }
+  }
+
+  &__picture {
+    img {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
   }
 
   &__thumbs {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 10px;
   }
 
   &__thumbs-item {
     align-items: center;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px 1px rgba($color-black, 0.3);
     cursor: pointer;
     display: flex;
+    justify-content: center;
     height: 70px;
     margin: 0 10px 10px 0;
     padding: 8px;
     width: 70px;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
   }
 }
 </style>

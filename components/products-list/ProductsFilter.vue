@@ -1,12 +1,12 @@
 <template>
-  <div class="filter">
+  <nav class="filter">
     <p class="filter__label">
-      Categories:
+      Категорії:
     </p>
     <ul class="filter__list">
       <li
         class="filter__item"
-        :class="{ 'filter__item--active': !$route.params.category }"
+        :class="{ 'is-active': !$route.params.category }"
       >
         <NuxtLink
           :to="{ name: 'index' }"
@@ -19,7 +19,7 @@
         v-for="category in categories"
         :key="category.id"
         class="filter__item"
-        :class="{ 'filter__item--active': $route.params.category === `${category.slug}-${category.id}` }"
+        :class="{ 'is-active': $route.params.category === `${category.slug}-${category.id}` }"
       >
         <NuxtLink
           :to="{
@@ -32,7 +32,7 @@
         </NuxtLink>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -55,30 +55,42 @@ export default {
 
 <style lang="scss">
 .filter {
-  align-items: center;
   display: flex;
+  flex-wrap: wrap;
   font-size: 1.9rem;
   margin-bottom: 30px;
   $this: &;
 
   &__label {
     font-weight: 700;
-    margin-right: 20px;
+    margin: 0 20px 5px 0;
   }
 
   &__list {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -8px;
   }
 
   &__item {
-    margin: 0 8px;
+    margin: 0 8px 5px;
   }
 
   &__item--active {
     #{$this}__item-link {
-      color: #727272;
+      color: $color-grey;
+      text-decoration: underline;
+    }
+  }
+
+  &__item-link {
+    @include trs;
+
+    &:hover,
+    &:focus,
+    .is-active & {
+      color: $color-grey;
       text-decoration: underline;
     }
   }

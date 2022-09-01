@@ -1,8 +1,10 @@
 <template>
-  <div class="site-inner">
-    <ProductsFilter />
-    <ProductsList :products="products"></ProductsList>
-  </div>
+  <main class="site-main">
+    <div class="container">
+      <ProductsFilter />
+      <ProductsList :products="products"></ProductsList>
+    </div>
+  </main>
 </template>
 
 <script>

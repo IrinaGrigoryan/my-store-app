@@ -1,14 +1,12 @@
 <template>
-  <div class="products-list-wrapper">
-    <ul class="products-list">
-      <li class="products-list__item"
-          v-for="product in products"
-          :key="product.id"
-      >
-        <ProductCard :product="product"></ProductCard>
-      </li>
-    </ul>
-  </div>
+  <ul class="products-list">
+    <li class="products-list__item"
+        v-for="product in products"
+        :key="product.id"
+    >
+      <ProductCard :product="product"></ProductCard>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -36,6 +34,16 @@ export default {
     margin-bottom: 30px;
     padding: 0 15px;
     width: 25%;
+
+    @include media-max(1279) {
+      width: 50%;
+    }
+
+    @include media-max(767) {
+      margin: 0 auto 30px;
+      max-width: 480px;
+      width: 100%;
+    }
   }
 }
 </style>

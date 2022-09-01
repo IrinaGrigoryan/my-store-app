@@ -5,5 +5,5 @@ Vue.filter('formatPrice', (value) => {
     return value
   }
 
-  return `${value.toFixed(2)} UAH`
+  return `${value.toFixed(2)} грн`
 })
