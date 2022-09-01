@@ -17,7 +17,6 @@
         </NuxtLink>
         </p>
         <h2 class="product-detail__title">{{ product.title }}</h2>
-        <p class="product-detail__description" v-if="product.description">{{ product.description }}</p>
         <p class="product-detail__price">{{ product.price | formatPrice }}</p>
         <p class="product-detail__seller-title">Продавець:</p>
         <p class="product-detail__seller">{{ product.seller }}</p>
@@ -41,6 +40,7 @@
             {{ product.telegram }}
           </a>
         </p>
+        <p class="product-detail__description" v-if="product.description">{{ product.description }}</p>
       </div>
     </article>
   </div>
@@ -143,7 +143,7 @@ export default {
   &__description {
     font-size: 1.8rem;
     line-height: 1.4;
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
   &__price {
