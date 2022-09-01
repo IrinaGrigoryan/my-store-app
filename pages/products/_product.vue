@@ -26,6 +26,7 @@
           <a
             :href="'https://instagram.com/_u/' + product.instagram"
             class="product-detail__social-link"
+            target="_blank"
           >
             {{ product.instagram }}
           </a>
@@ -35,6 +36,7 @@
           <a
             :href="'https://t.me/' + product.telegram"
             class="product-detail__social-link"
+            target="_blank"
           >
             {{ product.telegram }}
           </a>
